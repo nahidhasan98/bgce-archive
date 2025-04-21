@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Contribute with No Code - BGCE ARCHIVE</title>
+        <title>Readme - BGCE ARCHIVE</title>
 
 
         <!-- Custom HTML head -->
@@ -12,33 +12,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="highlight-css" href="highlight.css">
-        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
-        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "";
+            const path_to_root = "../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc.js"></script>
+        <script src="../../toc.js"></script>
     </head>
     <body>
     <div id="body-container">
@@ -91,7 +91,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -126,7 +126,7 @@
                     <h1 class="menu-title">BGCE ARCHIVE</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         <a href="https://github.com/JsIqbal/bgce-archive" title="Git repository" aria-label="Git repository">
@@ -158,40 +158,119 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h3 id="-non-tech-contributions-no-code-required"><a class="header" href="#-non-tech-contributions-no-code-required">💡 <strong>Non-Tech Contributions (No code required!)</strong></a></h3>
-<p>You can still make a huge impact without writing any code. Here’s how:</p>
+                        <h1 id="ccwc-custom-word-count"><a class="header" href="#ccwc-custom-word-count">CCWC (Custom Word Count)</a></h1>
+<p>A Go implementation of the Unix/Linux <code>wc</code> command that counts bytes, lines, words, and characters in text files.</p>
+<h2 id="features"><a class="header" href="#features">Features</a></h2>
 <ul>
+<li>Count bytes in a file (<code>-c</code>)</li>
+<li>Count lines in a file (<code>-l</code>)</li>
+<li>Count words in a file (<code>-w</code>)</li>
+<li>Count characters in a file (<code>-m</code>)</li>
+<li>Support for reading from both files and standard input (stdin)</li>
+<li>Default mode that displays line, word, and byte counts together</li>
+</ul>
+<h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
+<ol>
+<li>Ensure you have Go installed on your system</li>
+<li>Navigate to the project directory:</li>
+</ol>
+<pre><code class="language-bash">cd /Users/rokib/Developer/go_projects/bgce-archive/mini-projects/ccwc
+</code></pre>
+<ol start="3">
+<li>Build the project:</li>
+</ol>
+<pre><code class="language-bash">go build -o ccwc ./cmd/ccwc
+</code></pre>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<h3 id="basic-usage"><a class="header" href="#basic-usage">Basic Usage</a></h3>
+<pre><code class="language-bash">./ccwc [options] [filename]
+</code></pre>
+<p>If no filename is provided, ccwc reads from standard input.</p>
+<h3 id="options"><a class="header" href="#options">Options</a></h3>
+<ul>
+<li><code>-c</code>: Print the byte count</li>
+<li><code>-l</code>: Print the line count</li>
+<li><code>-w</code>: Print the word count</li>
+<li><code>-m</code>: Print the character count (locale-dependent)</li>
+</ul>
+<p>If no options are provided, ccwc displays line count, word count, and byte count.</p>
+<h3 id="examples"><a class="header" href="#examples">Examples</a></h3>
+<ol>
+<li>Count bytes in a file:</li>
+</ol>
+<pre><code class="language-bash">./ccwc -c testdata/test.txt
+</code></pre>
+<ol start="2">
+<li>Count lines in a file:</li>
+</ol>
+<pre><code class="language-bash">./ccwc -l testdata/test.txt
+</code></pre>
+<ol start="3">
+<li>Count words in a file:</li>
+</ol>
+<pre><code class="language-bash">./ccwc -w testdata/test.txt
+</code></pre>
+<ol start="4">
+<li>Count characters in a file:</li>
+</ol>
+<pre><code class="language-bash">./ccwc -m testdata/test.txt
+</code></pre>
+<ol start="5">
+<li>Default output (lines, words, and bytes):</li>
+</ol>
+<pre><code class="language-bash">./ccwc testdata/test.txt
+</code></pre>
+<ol start="6">
+<li>Read from standard input:</li>
+</ol>
+<pre><code class="language-bash">cat testdata/test.txt | ./ccwc -m
+</code></pre>
+<h2 id="project-structure"><a class="header" href="#project-structure">Project Structure</a></h2>
+<pre><code>mini-projects/ccwc/
+├── cmd/
+│   └── ccwc/
+│       └── main.go       # Main application entry point
+├── internal/
+│   └── processor/
+│       └── processor.go  # Core processing functions
+├── testdata/            # Test files directory
+│   └── test.txt
+├── go.mod               # Go module file
+└── README.md           # This file
+</code></pre>
+<h2 id="implementation-details"><a class="header" href="#implementation-details">Implementation Details</a></h2>
+<p>The project is organized into two main components:</p>
+<ol>
 <li>
-<p><strong>Content Contributions</strong><br />
-Add value by submitting resources, notes, blog posts, or guides. You don’t need to write code to make a meaningful contribution!</p>
+<p><strong>Processor Package</strong> (<code>internal/processor/processor.go</code>):</p>
+<ul>
+<li>Contains core counting functions</li>
+<li>Implements byte, line, word, and character counting logic</li>
+<li>Uses efficient buffered I/O operations</li>
+</ul>
 </li>
 <li>
-<p><strong>Community Engagement</strong><br />
-Help grow the knowledge base by engaging with others. Review content, offer suggestions, and be a part of discussions that improve the Vault.</p>
-</li>
-</ul>
-<hr />
-<p>We accept many types of contributions:</p>
+<p><strong>Main Package</strong> (<code>cmd/ccwc/main.go</code>):</p>
 <ul>
-<li><strong>🧠 Interview Content</strong> – Real-world Q&amp;A, curated challenges, topic-wise notes.</li>
-<li><strong>📚 Class Notes</strong> – University, bootcamp, or online course summaries.</li>
-<li><strong>🖼️ Visual Resources</strong> – Architecture diagrams, cheat sheets, flowcharts.</li>
-<li><strong>📖 Blog Posts</strong> – How-tos, opinion pieces, technical deep-dives.</li>
-<li><strong>🎬 Videos</strong> – Tech talks, tutorials, playlists, or webinars.</li>
-<li><strong>📖 Personal Stories</strong> – Career transitions, rejections, job search journeys.</li>
-<li><strong>🔗 Curated Links</strong> – Tools, docs, slide decks, benchmarks.</li>
+<li>Handles command-line argument parsing</li>
+<li>Manages file operations</li>
+<li>Coordinates counting operations</li>
+<li>Formats and displays output</li>
 </ul>
-<hr />
+</li>
+</ol>
+<h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
+<p>Contributions are welcome! Please feel free to submit a Pull Request.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="CONTRIBUTING.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../mini-projects/1-cards/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="TECH-STACK.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../rbac/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -201,11 +280,11 @@ Help grow the knowledge base by engaging with others. Review content, offer sugg
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="CONTRIBUTING.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../mini-projects/1-cards/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="TECH-STACK.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../rbac/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -220,13 +299,13 @@ Help grow the knowledge base by engaging with others. Review content, offer sugg
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
 
         <!-- Custom JS scripts -->
 
