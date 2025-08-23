@@ -36,11 +36,23 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc.js"></script>
     </head>
     <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
     <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
@@ -81,10 +93,13 @@
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
+                sidebar_toggle.checked = false;
             }
-            sidebar_toggle.checked = sidebar === 'visible';
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
@@ -118,7 +133,7 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -129,7 +144,7 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/JsIqbal/bgce-archive" title="Git repository" aria-label="Git repository">
+                        <a href="https://github.com/NesoHQ/bgce-archive.git" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
 
@@ -138,7 +153,12 @@
 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -158,22 +178,40 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h3 id="3--commit-strategy"><a class="header" href="#3--commit-strategy">3. 📌 COMMIT STRATEGY</a></h3>
-<h4 id="-format"><a class="header" href="#-format">✅ Format:</a></h4>
-<pre><code>[&lt;type&gt;] &lt;short-description&gt;
+                        <h3 id="-commit-strategy"><a class="header" href="#-commit-strategy">📌 <strong>COMMIT STRATEGY</strong></a></h3>
+<h4 id="-setup"><a class="header" href="#-setup">🔧 <strong>Setup</strong></a></h4>
+<pre><code class="language-bash">make setup-commit-hook
 </code></pre>
-<h4 id="-types"><a class="header" href="#-types">💡 Types:</a></h4>
+<hr />
+<h4 id="-commit-message-format"><a class="header" href="#-commit-message-format">✅ <strong>Commit Message Format</strong></a></h4>
+<pre><code>[&lt;service&gt;] (&lt;type/feature-name&gt;): &lt;Capitalized short description&gt;
+</code></pre>
+<hr />
+<h4 id="-allowed-types"><a class="header" href="#-allowed-types">💡 <strong>Allowed Types</strong></a></h4>
 <ul>
-<li><code>feat</code>: New content or file</li>
-<li><code>fix</code>: Fixes formatting or broken links</li>
-<li><code>docs</code>: Changes to README, guides</li>
-<li><code>refactor</code>: Structural changes</li>
+<li><code>feat</code> – New feature or functionality</li>
+<li><code>fix</code> – Bug fix or issue correction</li>
+<li><code>patch</code> – Minor updates or hotfixes</li>
+<li><code>docs</code> – Documentation changes</li>
+<li><code>style</code> – Code style changes (formatting, linting)</li>
+<li><code>refactor</code> – Code restructuring without behavior change</li>
+<li><code>test</code> – Adding or updating tests</li>
+<li><code>chore</code> – Build tasks, CI configs, or other maintenance</li>
 </ul>
-<h4 id="-example-commits"><a class="header" href="#-example-commits">🧪 Example Commits:</a></h4>
-<pre><code>[feat] Add interview questions for GCP
-[fix] Correct broken link in course summary
-[docs] Add README to cli-tools
+<hr />
+<h4 id="-example-commits"><a class="header" href="#-example-commits">🧪 <strong>Example Commits</strong></a></h4>
+<pre><code>[inventory] (feat/add-product): Add product listing endpoint
+[auth] (fix/token-expiry): Correct token expiry issue
+[payment] (patch/update-paypal): Update PayPal integration
+[docs] (docs/readme): Update CLI tool usage instructions
 </code></pre>
+<hr />
+<p>✅ <strong>Notes for contributors:</strong></p>
+<ul>
+<li><strong>Service</strong>: Use the relevant service or package name in square brackets.</li>
+<li><strong>Type/feature-name</strong>: Specify the type and concise feature name in parentheses.</li>
+<li><strong>Description</strong>: Must start with an uppercase letter and clearly state the change.</li>
+</ul>
 <hr />
 
                     </main>
@@ -222,6 +260,7 @@
         <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
+
 
 
     </div>
