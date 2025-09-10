@@ -937,7 +937,7 @@ func main() {
 </blockquote>
 <h2 id="-variable-declare-করার-নিয়ম"><a class="header" href="#-variable-declare-করার-নিয়ম">🧠 Variable Declare করার নিয়ম</a></h2>
 <p>Go তে ভেরিয়েবল declare করার তিনটি পদ্ধতি আছে:</p>
-<h3 id="1-short-variable-declaration--"><a class="header" href="#1-short-variable-declaration--">1. Short Variable Declaration (<code>: =</code>)</a></h3>
+<h3 id="1-short-variable-declaration-"><a class="header" href="#1-short-variable-declaration-">1. Short Variable Declaration (<code>:=</code>)</a></h3>
 <p>Short declaration (<code>:=</code>) শুধুমাত্র ফাংশনের ভেতরে ব্যবহার করা যায়:</p>
 <pre><code class="language-go">func main() {
     a := 10
@@ -1029,7 +1029,7 @@ a = false         // bool (reassigned)
 <blockquote>
 <p><code>const</code> দিয়ে declare করা ভেরিয়েবল পরিবর্তন করা যাবে না।</p>
 </blockquote>
-<p>[Author : @shahriar-em0n  Date: 2025-06-09 Category: interview-qa/class-wise ]</p>
+<p>[Author : @shahriar-em0n Date: 2025-06-09 Category: interview-qa/class-wise ]</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="class-09--if-else-and-switch"><a class="header" href="#class-09--if-else-and-switch">Class 09 : If else and switch</a></h1>
 <p>Go তে কন্ডিশনাল স্টেটমেন্ট ব্যবহৃত হয় সিদ্ধান্ত নেওয়ার জন্য। নিচে <code>if</code>, <code>else if</code>, <code>else</code>, এবং <code>switch</code> এর বিস্তারিত ব্যাখ্যা এবং উদাহরণ দেওয়া হলো।</p>
 <hr />
@@ -1070,17 +1070,13 @@ func main() {
 import "fmt"
 
 func main() {
-    package main
-import "fmt"
-
-func main() {
     age := 18 // বয়স ১৮ সেট করা হয়েছে
 
     if age &gt; 18 {
         // যদি বয়স ১৮ এর বেশি হয়, তাহলে নিচের মেসেজ দেখা যাবে
         fmt.Println("You are eligible to be married") // প্রাপ্তবয়স্ক, বিয়ের জন্য উপযুক্ত
     } else if age &lt; 18 {
-        // যদি বয়স ১৮ এর কম হয়, তাহলে এই অংশ এক্সিকিউট হবে 
+        // যদি বয়স ১৮ এর কম হয়, তাহলে এই অংশ এক্সিকিউট হবে
         fmt.Println("You are not eligible to be married, but you can love someone") // নাবালক, প্রেম করা যেতে পারে
     } else if age == 18 {
         // যদি বয়স একদম ১৮ হয়, তাহলে এই অংশ এক্সিকিউট হবে
@@ -1088,7 +1084,6 @@ func main() {
     }
 }
 
-}
 </code></pre>
 <blockquote>
 <p>একাধিক স্টেটমেন্ট চেক করার জন্য <code>else if</code> ব্যবহার করা হয় | উপরের কোডে বয়স অনুসারে তিনটি ভিন্ন রেসপন্স দেখানো হয়েছে।</p>
@@ -1109,7 +1104,7 @@ func main() {
     case 3:
         fmt.Println("Tuesday") // যদি day == 3 হয়, তাহলে Tuesday প্রিন্ট হবে
     default:
-        fmt.Println("Another day") // যদি কোন case না মিলে , তাহলে default অংশে চলে যাবে 
+        fmt.Println("Another day") // যদি কোন case না মিলে , তাহলে default অংশে চলে যাবে
     }
 }
 </code></pre>
@@ -1122,7 +1117,7 @@ func main() {
 <li>Go তে <code>if</code> এবং <code>switch</code> ব্লকে ব্র্যাকেট <code>{}</code> আবশ্যক।</li>
 <li><code>switch</code> ব্লকে প্রতিটি case এর পরে <code>break</code> লিখতে হয় না, কারণ Go নিজেই implicity break করে দেয়, যদি না <code>fallthrough</code> ব্যবহার করা হবে |</li>
 </ul>
-<p>[Author : @shahriar-em0n  Date: 2025-06-11 Category: interview-qa/class-wise ]</p>
+<p>[Author : @shahriar-em0n Date: 2025-06-11 Category: interview-qa/class-wise ]</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="class-10--introduction-to-functions"><a class="header" href="#class-10--introduction-to-functions">Class 10 : Introduction to Functions</a></h1>
 <h2 id="-function-কী"><a class="header" href="#-function-কী">🔍 Function কী?</a></h2>
 <p><code>Function</code> (ফাংশন) হল কোডের একটি পুনঃব্যবহারযোগ্য ব্লক যা নির্দিষ্ট একটি কাজ করে।<br />
@@ -7699,7 +7694,7 @@ func main() {
 	fmt.Println(a1 &gt; a2) // true
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><p>[<strong>Author:</strong> @mdimamhosen
+<div style="break-before: page; page-break-before: always;"></div><p>[<strong>Author:</strong> @mdimamhosen, @mahabubulhasibshawon
 <strong>Date:</strong> 2025-04-19
 <strong>Category:</strong> interview-qa/conditional-statements
 <strong>Tags:</strong> [go, conditional-statements, if-else]
@@ -7893,28 +7888,74 @@ func main() {
 	}
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><p>[<strong>Author:</strong> @mdimamhosen
+<div style="break-before: page; page-break-before: always;"></div><p>[<strong>Author:</strong> @mdimamhosen, @mahabubulhasibshawon
 <strong>Date:</strong> 2025-04-19
 <strong>Category:</strong> interview-qa/constants
 <strong>Tags:</strong> [go, constants, beginner]
 ]</p>
-<h1 id="the-const-keyword-declares-the-variable-as-constant-which-means-that-it-is-unchangeable-and-read-only"><a class="header" href="#the-const-keyword-declares-the-variable-as-constant-which-means-that-it-is-unchangeable-and-read-only">The const keyword declares the variable as "constant", which means that it is unchangeable and read-only.</a></h1>
-<pre><code class="language-go">package main
-import ("fmt")
-
-const user = "admin" // cannot be changed
-
-func main() {
-  fmt.Println("admin")
-}
+<h3 id="-constant-কখন-বযবহৃত-হয়"><a class="header" href="#-constant-কখন-বযবহৃত-হয়">📌 <strong>Constant কখন ব্যবহৃত হয়?</strong></a></h3>
+<ul>
+<li>যখন আপনার এমন একটি মান প্রয়োজন যা প্রোগ্রাম চলাকালীন সময়ে কখনোই পরিবর্তন হবে না, তখন constant ব্যবহার করা উচিত।</li>
+<li>এটি সাধারণত magic numbers বা fixed messages/states/states নির্ধারণ করার জন্য ব্যবহৃত হয়।</li>
+</ul>
+<hr />
+<h3 id="-go-build-করার-সময়-constant-কোথায়-যায়"><a class="header" href="#-go-build-করার-সময়-constant-কোথায়-যায়">⚙️ <strong>Go build করার সময় Constant কোথায় যায়?</strong></a></h3>
+<p>Go প্রোগ্রাম build করার সময়, compiler <code>const</code> দিয়ে declared মানগুলোকে <strong>code segment</strong> বা <strong>text segment</strong>-এ রাখে।</p>
+<ul>
+<li><code>const</code> variable গুলো <strong>compile-time</strong>-এ evaluate হয়, অর্থাৎ run-time এ গিয়ে তা আর হিসাব করে না।</li>
+<li>এদের জন্য <strong>memory allocation হয় না heap বা stack-এ</strong>, বরং এরা <strong>program binary-র read-only অংশে</strong> store থাকে।</li>
+<li>এই কারণে constant গুলো <strong>immutable (অপরিবর্তনীয়)</strong> হয় এবং runtime-এ পরিবর্তন করা যায় না।</li>
+</ul>
+<h3 id="-উদাহরণসবরূপ"><a class="header" href="#-উদাহরণসবরূপ">🧠 উদাহরণস্বরূপ:</a></h3>
+<pre><code class="language-go">const PI = 3.14
 </code></pre>
-<h1 id="constant-rules"><a class="header" href="#constant-rules">Constant Rules</a></h1>
-<h3 id="1-constant-names-follow-the-same-naming-rules-as-variables"><a class="header" href="#1-constant-names-follow-the-same-naming-rules-as-variables">1. Constant names follow the same naming rules as variables</a></h3>
-<h3 id="2-constant-names-are-usually-written-in-uppercase-letters"><a class="header" href="#2-constant-names-are-usually-written-in-uppercase-letters">2. Constant names are usually written in uppercase letters</a></h3>
-<h3 id="3-constants-can-be-declared-both-inside-and-outside-of-a-function"><a class="header" href="#3-constants-can-be-declared-both-inside-and-outside-of-a-function">3. Constants can be declared both inside and outside of a function</a></h3>
-<h1 id="frequently-asked-questions-3"><a class="header" href="#frequently-asked-questions-3">Frequently Asked Questions</a></h1>
-<h3 id="1-what-is-a-constant-in-go"><a class="header" href="#1-what-is-a-constant-in-go">1. <strong>What is a constant in Go?</strong></a></h3>
-<p><strong>Answer:</strong> A constant is a variable whose value cannot be changed once it is assigned. Constants are declared using the <code>const</code> keyword.</p>
+<ul>
+<li>এই মানটি runtime-এ কোনো memory assign করে রাখবে না।</li>
+<li>বরং যেখানেই <code>PI</code> ব্যবহার করা হবে, সেখানে সরাসরি <code>3.14</code> inject করে দেবে Go compiler।</li>
+</ul>
+<hr />
+<h3 id="-performance-এর-দিক-থেকে-constant-এর-উপকারিতা"><a class="header" href="#-performance-এর-দিক-থেকে-constant-এর-উপকারিতা">🚀 <strong>Performance এর দিক থেকে Constant এর উপকারিতা:</strong></a></h3>
+<ol>
+<li>
+<p><strong>No Memory Overhead:</strong>
+Constant মানের জন্য আলাদা memory allocation হয় না (heap/stack এ না), ফলে এটি memory-efficient।</p>
+</li>
+<li>
+<p><strong>Fast Execution:</strong>
+যেহেতু constant-এর মান compile time-এ জানা থাকে, Go compiler এগুলোকে সরাসরি machine instruction এ transform করে — এতে execution দ্রুত হয়।</p>
+</li>
+<li>
+<p><strong>Safe &amp; Predictable:</strong>
+Constant মান runtime-এ হঠাৎ করে পরিবর্তন হয়ে যাবার ভয় থাকে না, যা bug প্রতিরোধে সাহায্য করে।</p>
+</li>
+</ol>
+<hr />
+<h3 id="-stack-heap-এবং-code-segment--constant-কোথায়"><a class="header" href="#-stack-heap-এবং-code-segment--constant-কোথায়">📍 Stack, Heap, এবং Code Segment – Constant কোথায়?</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>Variable Type</th><th>Stored In</th><th>Mutable?</th><th>Allocated at</th></tr></thead><tbody>
+<tr><td><code>var</code></td><td>Stack / Heap</td><td>✅ হ্যাঁ</td><td>Runtime</td></tr>
+<tr><td><code>const</code></td><td>Code Segment</td><td>❌ না</td><td>Compile Time</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h3 id="-যখন-constant-বযবহার-করা-উচিত"><a class="header" href="#-যখন-constant-বযবহার-করা-উচিত">🎯 যখন constant ব্যবহার করা উচিত:</a></h3>
+<ul>
+<li>যখন আপনি এমন কিছু ডেটা ব্যবহার করছেন যা <strong>একই থাকে</strong> পুরো প্রোগ্রাম জুড়ে (যেমন <code>PI</code>, <code>MAX_RETRIES</code>, <code>VERSION</code> ইত্যাদি)</li>
+<li>যখন আপনি এমন মান ব্যবহার করছেন যা <strong>পরিবর্তন করার প্রয়োজন নেই বা করা উচিত নয়</strong></li>
+<li>যখন আপনি <strong>better performance ও memory efficiency</strong> চান</li>
+</ul>
+<hr />
+<h3 id="-ভুল-ধারণা"><a class="header" href="#-ভুল-ধারণা">🛑 ভুল ধারণা:</a></h3>
+<p>অনেকে মনে করে constant মান মানে শুধু number বা string। কিন্তু Go তে constant হিসেবে <code>bool</code>, <code>rune</code>, এবং untyped value-ও ব্যবহার করা যায় — যদিও complex type যেমন slice, map, array constant হিসেবে ব্যবহার করা যায় না।</p>
+<hr />
+<h1 id="constant-rules-নিয়মাবলী"><a class="header" href="#constant-rules-নিয়মাবলী">Constant Rules (নিয়মাবলী)</a></h1>
+<h3 id="1-constant-এর-নাম-সাধারণ-variable-এর-মতোই-rule-follow-করে"><a class="header" href="#1-constant-এর-নাম-সাধারণ-variable-এর-মতোই-rule-follow-করে">1. Constant-এর নাম সাধারণ variable এর মতোই rule follow করে</a></h3>
+<h3 id="2-constant-এর-নাম-সাধারণত-uppercase-অকষরে-লেখা-হয়"><a class="header" href="#2-constant-এর-নাম-সাধারণত-uppercase-অকষরে-লেখা-হয়">2. Constant-এর নাম সাধারণত uppercase অক্ষরে লেখা হয়</a></h3>
+<h3 id="3-constants-ফাংশনের-ভিতর-এবং-বাহির--দুই-জায়গাতেই-ঘোষণা-করা-যায়"><a class="header" href="#3-constants-ফাংশনের-ভিতর-এবং-বাহির--দুই-জায়গাতেই-ঘোষণা-করা-যায়">3. Constants ফাংশনের ভিতর এবং বাহির — দুই জায়গাতেই ঘোষণা করা যায়</a></h3>
+<hr />
+<h2 id="frequently-asked-questions-3"><a class="header" href="#frequently-asked-questions-3">Frequently Asked Questions</a></h2>
+<h3 id="1-go-তে-constant-বলতে-কী-বোঝায়"><a class="header" href="#1-go-তে-constant-বলতে-কী-বোঝায়">1. <strong>Go-তে constant বলতে কী বোঝায়?</strong></a></h3>
+<p><strong>উত্তর:</strong>
+একটি constant হলো এমন একটি variable যার মান একবার সেট করার পর পরিবর্তন করা যায় না। Constant ঘোষণা করতে <code>const</code> কিওয়ার্ড ব্যবহার করা হয়।</p>
 <p><strong>Code Example:</strong></p>
 <pre><code class="language-go">package main
 import "fmt"
@@ -7926,8 +7967,9 @@ func main() {
 }
 </code></pre>
 <hr />
-<h3 id="2-can-constants-be-declared-inside-a-function"><a class="header" href="#2-can-constants-be-declared-inside-a-function">2. <strong>Can constants be declared inside a function?</strong></a></h3>
-<p><strong>Answer:</strong> Yes, constants can be declared both inside and outside of a function.</p>
+<h3 id="2-constant-কি-ফাংশনের-ভিতর-ঘোষণা-করা-যায়"><a class="header" href="#2-constant-কি-ফাংশনের-ভিতর-ঘোষণা-করা-যায়">2. <strong>Constant কি ফাংশনের ভিতর ঘোষণা করা যায়?</strong></a></h3>
+<p><strong>উত্তর:</strong>
+হ্যাঁ, constant ফাংশনের ভিতরেও এবং বাইরেও ঘোষণা করা যায়।</p>
 <p><strong>Code Example:</strong></p>
 <pre><code class="language-go">package main
 import "fmt"
@@ -7938,8 +7980,9 @@ func main() {
 }
 </code></pre>
 <hr />
-<h3 id="3-can-constants-hold-values-other-than-numbers"><a class="header" href="#3-can-constants-hold-values-other-than-numbers">3. <strong>Can constants hold values other than numbers?</strong></a></h3>
-<p><strong>Answer:</strong> Yes, constants can hold string, boolean, or even character values.</p>
+<h3 id="3-constant-কি-শুধু-সংখযা-রাখে-না-কি-অনয-টাইপও-রাখা-যায়"><a class="header" href="#3-constant-কি-শুধু-সংখযা-রাখে-না-কি-অনয-টাইপও-রাখা-যায়">3. <strong>Constant কি শুধু সংখ্যা রাখে, না কি অন্য টাইপও রাখা যায়?</strong></a></h3>
+<p><strong>উত্তর:</strong>
+Constant শুধু সংখ্যা না, string, boolean, এমনকি character টাইপের মানও রাখতে পারে।</p>
 <p><strong>Code Example:</strong></p>
 <pre><code class="language-go">package main
 import "fmt"
@@ -7953,8 +7996,9 @@ func main() {
 }
 </code></pre>
 <hr />
-<h3 id="4-can-constants-be-computed-at-runtime"><a class="header" href="#4-can-constants-be-computed-at-runtime">4. <strong>Can constants be computed at runtime?</strong></a></h3>
-<p><strong>Answer:</strong> No, constants must be assigned a value that can be determined at compile time.</p>
+<h3 id="4-constant-কি-runtime-এ-হিসাব-করে-মান-রাখতে-পারে"><a class="header" href="#4-constant-কি-runtime-এ-হিসাব-করে-মান-রাখতে-পারে">4. <strong>Constant কি runtime-এ হিসাব করে মান রাখতে পারে?</strong></a></h3>
+<p><strong>উত্তর:</strong>
+না, constant-কে এমন মান দিতে হবে যা compile time-এ নির্ধারণ করা যায়।</p>
 <p><strong>Code Example:</strong></p>
 <pre><code class="language-go">package main
 import "fmt"
@@ -7966,8 +8010,9 @@ func main() {
 }
 </code></pre>
 <hr />
-<h3 id="5-what-happens-if-you-try-to-change-a-constants-value"><a class="header" href="#5-what-happens-if-you-try-to-change-a-constants-value">5. <strong>What happens if you try to change a constant's value?</strong></a></h3>
-<p><strong>Answer:</strong> The compiler will throw an error if you try to change the value of a constant.</p>
+<h3 id="5-যদি-constant-এর-মান-পরিবরতন-করার-চেষটা-করি-তাহলে-কী-হয়"><a class="header" href="#5-যদি-constant-এর-মান-পরিবরতন-করার-চেষটা-করি-তাহলে-কী-হয়">5. <strong>যদি constant-এর মান পরিবর্তন করার চেষ্টা করি, তাহলে কী হয়?</strong></a></h3>
+<p><strong>উত্তর:</strong>
+যদি আপনি constant-এর মান পরিবর্তনের চেষ্টা করেন, তাহলে compile time-এ error হবে।</p>
 <p><strong>Code Example:</strong></p>
 <pre><code class="language-go">package main
 import "fmt"
@@ -7980,8 +8025,9 @@ func main() {
 }
 </code></pre>
 <hr />
-<h3 id="6-can-constants-be-used-in-expressions"><a class="header" href="#6-can-constants-be-used-in-expressions">6. <strong>Can constants be used in expressions?</strong></a></h3>
-<p><strong>Answer:</strong> Yes, constants can be used in expressions to compute other constants.</p>
+<h3 id="6-constant-কি-expression-এ-বযবহার-করা-যায়"><a class="header" href="#6-constant-কি-expression-এ-বযবহার-করা-যায়">6. <strong>Constant কি expression-এ ব্যবহার করা যায়?</strong></a></h3>
+<p><strong>উত্তর:</strong>
+হ্যাঁ, constant ব্যবহার করে অন্য constant-এর মান হিসাব করা যায়।</p>
 <p><strong>Code Example:</strong></p>
 <pre><code class="language-go">package main
 import "fmt"
@@ -7995,8 +8041,9 @@ func main() {
 }
 </code></pre>
 <hr />
-<h3 id="7-what-is-the-difference-between-const-and-var-in-go"><a class="header" href="#7-what-is-the-difference-between-const-and-var-in-go">7. <strong>What is the difference between <code>const</code> and <code>var</code> in Go?</strong></a></h3>
-<p><strong>Answer:</strong> <code>const</code> is used for values that do not change, while <code>var</code> is used for variables whose values can change.</p>
+<h3 id="7-const-এবং-var-এর-মধযে-পারথকয-কী"><a class="header" href="#7-const-এবং-var-এর-মধযে-পারথকয-কী">7. <strong><code>const</code> এবং <code>var</code> এর মধ্যে পার্থক্য কী?</strong></a></h3>
+<p><strong>উত্তর:</strong>
+<code>const</code> ব্যবহার করা হয় এমন মানের জন্য যেটা কখনোই পরিবর্তন হবে না, আর <code>var</code> ব্যবহার করা হয় পরিবর্তনশীল মান রাখার জন্য।</p>
 <p><strong>Code Example:</strong></p>
 <pre><code class="language-go">package main
 import "fmt"
@@ -8012,8 +8059,9 @@ func main() {
 }
 </code></pre>
 <hr />
-<h3 id="8-can-constants-be-of-type-array-or-slice"><a class="header" href="#8-can-constants-be-of-type-array-or-slice">8. <strong>Can constants be of type array or slice?</strong></a></h3>
-<p><strong>Answer:</strong> No, constants cannot be of type array, slice, or map.</p>
+<h3 id="8-constant-কি-array-বা-slice-টাইপের-হতে-পারে"><a class="header" href="#8-constant-কি-array-বা-slice-টাইপের-হতে-পারে">8. <strong>Constant কি array বা slice টাইপের হতে পারে?</strong></a></h3>
+<p><strong>উত্তর:</strong>
+না, constant কখনো array, slice বা map টাইপের হতে পারে না।</p>
 <p><strong>Code Example:</strong></p>
 <pre><code class="language-go">package main
 import "fmt"
@@ -8024,8 +8072,9 @@ func main() {
 }
 </code></pre>
 <hr />
-<h3 id="9-can-constants-be-exported-in-go"><a class="header" href="#9-can-constants-be-exported-in-go">9. <strong>Can constants be exported in Go?</strong></a></h3>
-<p><strong>Answer:</strong> Yes, constants can be exported if their names start with an uppercase letter.</p>
+<h3 id="9-go-তে-constant-কি-export-করা-যায়"><a class="header" href="#9-go-তে-constant-কি-export-করা-যায়">9. <strong>Go-তে constant কি export করা যায়?</strong></a></h3>
+<p><strong>উত্তর:</strong>
+হ্যাঁ, যদি constant-এর নাম uppercase letter দিয়ে শুরু হয়, তাহলে তা exported হয় এবং অন্য প্যাকেজ থেকেও access করা যায়।</p>
 <p><strong>Code Example:</strong></p>
 <pre><code class="language-go">package main
 import "fmt"
@@ -8037,8 +8086,9 @@ func main() {
 }
 </code></pre>
 <hr />
-<h3 id="10-what-are-untyped-constants-in-go"><a class="header" href="#10-what-are-untyped-constants-in-go">10. <strong>What are untyped constants in Go?</strong></a></h3>
-<p><strong>Answer:</strong> Untyped constants do not have a specific type until they are assigned to a variable.</p>
+<h3 id="10-go-তে-untyped-constant-কী"><a class="header" href="#10-go-তে-untyped-constant-কী">10. <strong>Go-তে untyped constant কী?</strong></a></h3>
+<p><strong>উত্তর:</strong>
+Untyped constant এমন constant যেটার কোনো নির্দিষ্ট টাইপ নেই যতক্ষণ না তা কোনো variable এ assign করা হয়।</p>
 <p><strong>Code Example:</strong></p>
 <pre><code class="language-go">package main
 import "fmt"
@@ -13125,22 +13175,79 @@ Function ব্যবহার করে দুই সংখ্যার গড় 
 </tbody></table>
 </div>
 <hr />
-<h3 id="-beginner-friendly-cp-problems"><a class="header" href="#-beginner-friendly-cp-problems">🧑‍💻 Beginner Friendly CP Problems</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>#</th><th>UID</th><th>Title</th><th>Link</th><th>Tag</th></tr></thead><tbody>
-<tr><td>22</td><td>4598</td><td>Weird Algorithm</td><td><a href="https://cses.fi/problemset/task/1068">Link</a></td><td></td></tr>
-<tr><td>23</td><td>7334</td><td>Concatenation of Array</td><td><a href="https://leetcode.com/problems/concatenation-of-array/description/">Link</a></td><td></td></tr>
-<tr><td>24</td><td>1019</td><td>Sakurako's Exam</td><td><a href="https://codeforces.com/problemset/problem/2008/A">Link</a></td><td></td></tr>
-<tr><td>25</td><td>5640</td><td>Fifty-Fifty</td><td><a href="https://atcoder.jp/contests/abc132/tasks/abc132_a?lang=en">Link</a></td><td>dncpc6</td></tr>
-<tr><td>26</td><td>8123</td><td>Good Kid</td><td><a href="https://codeforces.com/problemset/problem/1873/B">Link</a></td><td>dncpc6</td></tr>
-<tr><td>27</td><td>2047</td><td>Make it Big</td><td><a href="https://toph.co/p/make-it-big">Link</a></td><td>dncpc6</td></tr>
-<tr><td>28</td><td>6831</td><td>Three Doors</td><td><a href="https://codeforces.com/problemset/problem/1709/A">Link</a></td><td>dncpc6</td></tr>
-<tr><td>29</td><td>9276</td><td>Distance Table</td><td><a href="https://atcoder.jp/contests/abc411/tasks/abc411_b?lang=en">Link</a></td><td>dncpc7</td></tr>
-<tr><td>30</td><td>3915</td><td>Sushi for Two</td><td><a href="https://codeforces.com/problemset/problem/1138/A">Link</a></td><td>dncpc7</td></tr>
-<tr><td>31</td><td>0313</td><td>Ilya and Bank Account</td><td><a href="https://codeforces.com/problemset/problem/313/A">Link</a></td><td></td></tr>
-<tr><td>32</td><td>1676</td><td>Equal Candies</td><td><a href="https://codeforces.com/problemset/problem/1676/B">Link</a></td><td></td></tr>
-<tr><td>33</td><td>1295</td><td>Find Numbers with Even Number of digits</td><td><a href="https://leetcode.com/problems/find-numbers-with-even-number-of-digits/">Link</a></td><td></td></tr>
+<h3 id="-brute-force-problems-easy--hard"><a class="header" href="#-brute-force-problems-easy--hard">🔨 Brute Force Problems (Easy → Hard)</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>UID</th><th>Title</th><th>Link</th><th>Tag</th></tr></thead><tbody>
+<tr><td>4598</td><td>Weird Algorithm</td><td><a href="https://cses.fi/problemset/task/1068">Link</a></td><td></td></tr>
+<tr><td>7334</td><td>Concatenation of Array</td><td><a href="https://leetcode.com/problems/concatenation-of-array/description/">Link</a></td><td></td></tr>
+<tr><td>1019</td><td>Sakurako's Exam</td><td><a href="https://codeforces.com/problemset/problem/2008/A">Link</a></td><td></td></tr>
+<tr><td>0313</td><td>Ilya and Bank Account</td><td><a href="https://codeforces.com/problemset/problem/313/A">Link</a></td><td></td></tr>
+<tr><td>1676</td><td>Equal Candies</td><td><a href="https://codeforces.com/problemset/problem/1676/B">Link</a></td><td></td></tr>
+<tr><td>8123</td><td>Good Kid</td><td><a href="https://codeforces.com/problemset/problem/1873/B">Link</a></td><td>dncpc6</td></tr>
+<tr><td>6831</td><td>Three Doors</td><td><a href="https://codeforces.com/problemset/problem/1709/A">Link</a></td><td>dncpc6</td></tr>
+<tr><td>9301</td><td>Buy a Shovel</td><td><a href="https://codeforces.com/problemset/problem/732/A">Link</a></td><td>NC</td></tr>
+<tr><td>9302</td><td>Games</td><td><a href="https://codeforces.com/problemset/problem/268/A">Link</a></td><td>NC</td></tr>
+<tr><td>9303</td><td>IQ Test</td><td><a href="https://codeforces.com/problemset/problem/25/A">Link</a></td><td>NC</td></tr>
+<tr><td>9304</td><td>New Year and Hurry</td><td><a href="https://codeforces.com/problemset/problem/750/A">Link</a></td><td>NC</td></tr>
+<tr><td>9401</td><td>Substring Problem</td><td><a href="https://atcoder.jp/contests/abc177/tasks/abc177_b">Link</a></td><td>NC</td></tr>
 </tbody></table>
 </div>
+<hr />
+<h3 id="-greedy-problems-easy--hard"><a class="header" href="#-greedy-problems-easy--hard">🪙 Greedy Problems (Easy → Hard)</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>UID</th><th>Title</th><th>Link</th><th>Tag</th></tr></thead><tbody>
+<tr><td>5640</td><td>Fifty-Fifty</td><td><a href="https://atcoder.jp/contests/abc132/tasks/abc132_a?lang=en">Link</a></td><td>dncpc6</td></tr>
+<tr><td>9276</td><td>Distance Table</td><td><a href="https://atcoder.jp/contests/abc411/tasks/abc411_b?lang=en">Link</a></td><td>dncpc7</td></tr>
+<tr><td>3915</td><td>Sushi for Two</td><td><a href="https://codeforces.com/problemset/problem/1138/A">Link</a></td><td>dncpc7</td></tr>
+<tr><td>9305</td><td>Candies</td><td><a href="https://codeforces.com/problemset/problem/1343/A">Link</a></td><td>NC</td></tr>
+<tr><td>9306</td><td>Phoenix and Balance</td><td><a href="https://codeforces.com/problemset/problem/1348/A">Link</a></td><td>NC</td></tr>
+<tr><td>9307</td><td>Turtle Puzzle</td><td><a href="https://codeforces.com/problemset/problem/1933/A">Link</a></td><td>NC</td></tr>
+<tr><td>9308</td><td>Park Lighting</td><td><a href="https://codeforces.com/problemset/problem/1358/A">Link</a></td><td>NC</td></tr>
+<tr><td>9309</td><td>Desorting</td><td><a href="https://codeforces.com/problemset/problem/1853/A">Link</a></td><td>NC</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h3 id="-string-problems"><a class="header" href="#-string-problems">🔤 String Problems</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>UID</th><th>Title</th><th>Link</th><th>Tag</th></tr></thead><tbody>
+<tr><td>1295</td><td>Find Numbers with Even Number of Digits</td><td><a href="https://leetcode.com/problems/find-numbers-with-even-number-of-digits/">Link</a></td><td></td></tr>
+<tr><td>930A</td><td>Two Substrings</td><td><a href="https://codeforces.com/problemset/problem/550/A">Link</a></td><td>NC</td></tr>
+<tr><td>930B</td><td>Dreamoon and WiFi</td><td><a href="https://codeforces.com/problemset/problem/476/B">Link</a></td><td>NC</td></tr>
+<tr><td>930C</td><td>Distinct Split</td><td><a href="https://codeforces.com/problemset/problem/1791/D">Link</a></td><td>NC</td></tr>
+<tr><td>9402</td><td>Greedy Takahashi</td><td><a href="https://atcoder.jp/contests/abc149/tasks/abc149_b">Link</a></td><td>NC</td></tr>
+<tr><td>9403</td><td>Festival</td><td><a href="https://atcoder.jp/contests/abc322/tasks/abc322_c">Link</a></td><td>NC</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h3 id="-binary-search--two-pointers-problems"><a class="header" href="#-binary-search--two-pointers-problems">🔍 Binary Search / Two Pointers Problems</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>UID</th><th>Title</th><th>Link</th><th>Tag</th></tr></thead><tbody>
+<tr><td>930D</td><td>Books</td><td><a href="https://codeforces.com/problemset/problem/279/B">Link</a></td><td>NC</td></tr>
+<tr><td>930E</td><td>Flipping Game</td><td><a href="https://codeforces.com/problemset/problem/327/A">Link</a></td><td>NC</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h3 id="-implementation--ad-hoc-problems"><a class="header" href="#-implementation--ad-hoc-problems">⚡ Implementation / Ad-hoc Problems</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>UID</th><th>Title</th><th>Link</th><th>Tag</th></tr></thead><tbody>
+<tr><td>2047</td><td>Make it Big</td><td><a href="https://toph.co/p/make-it-big">Link</a></td><td>dncpc6</td></tr>
+<tr><td>930F</td><td>Constructive Problem</td><td><a href="https://codeforces.com/problemset/problem/2122/A">Link</a></td><td>NC</td></tr>
+<tr><td>930G</td><td>Math Problem</td><td><a href="https://codeforces.com/problemset/problem/2122/B">Link</a></td><td>NC</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h3 id="-geometry--constructive-problems"><a class="header" href="#-geometry--constructive-problems">📐 Geometry / Constructive Problems</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>UID</th><th>Title</th><th>Link</th><th>Tag</th></tr></thead><tbody>
+<tr><td>930H</td><td>Cut Ribbon</td><td><a href="https://codeforces.com/problemset/problem/189/A">Link</a></td><td>NC</td></tr>
+<tr><td>930I</td><td>Towers</td><td><a href="https://codeforces.com/problemset/problem/189/B">Link</a></td><td>NC</td></tr>
+<tr><td>930J</td><td>Turtle Magic</td><td><a href="https://codeforces.com/problemset/problem/193/E">Link</a></td><td>NC</td></tr>
+</tbody></table>
+</div>
+<hr />
+<h3 id="-math--number-theory-problems"><a class="header" href="#-math--number-theory-problems">🔢 Math / Number Theory Problems</a></h3>
+<div class="table-wrapper"><table><thead><tr><th>UID</th><th>Title</th><th>Link</th><th>Tag</th></tr></thead><tbody>
+<tr><td>930K</td><td>Divisibility by Eight</td><td><a href="https://codeforces.com/problemset/problem/550/C">Link</a></td><td>NC</td></tr>
+<tr><td>930L</td><td>Common Divisors</td><td><a href="https://codeforces.com/problemset/problem/182/D">Link</a></td><td>NC</td></tr>
+<tr><td>9404</td><td>Next Prime</td><td><a href="https://atcoder.jp/contests/abc149/tasks/abc149_c">Link</a></td><td>NC</td></tr>
+<tr><td>9405</td><td>Factorial Yen Coin</td><td><a href="https://atcoder.jp/contests/abc208/tasks/abc208_b">Link</a></td><td>NC</td></tr>
+</tbody></table>
+</div>
+<hr />
 <h4 id="-problems-made-by-the-community"><a class="header" href="#-problems-made-by-the-community">🧩 Problems made by the community</a></h4>
 <div class="table-wrapper"><table><thead><tr><th>Problem Code</th><th>Problem Name &amp; Link</th><th>Author(Discord name)</th></tr></thead><tbody>
 <tr><td>2101</td><td><a href="https://www.hackerrank.com/contests/nebula-clash/challenges/challenge-5718">সমান ভাগের রহস্য</a></td><td>popcycle</td></tr>
@@ -13152,6 +13259,12 @@ Function ব্যবহার করে দুই সংখ্যার গড় 
 <tr><td>2204</td><td><a href="https://www.hackerrank.com/contests/nebula-clash-002/challenges/challenge-to-kraken">Challenge to Kraken</a></td><td>toji</td></tr>
 <tr><td>2205</td><td><a href="https://www.hackerrank.com/contests/nebula-clash-002/challenges/divisible-positive-subset">Divisible Positive Subset</a></td><td>MArhamAA</td></tr>
 <tr><td>2206</td><td><a href="https://www.hackerrank.com/contests/nebula-clash-002/challenges/yet-another-lcs-problem-1">Yet Another LCS Problem</a></td><td>MArhamAA</td></tr>
+<tr><td>3001</td><td><a href="https://www.hackerrank.com/contests/nebula-clash-003/challenges/krakens-patience-easy-version">Kraken’s Patience (Easy Version)</a></td><td>HasanMubin</td></tr>
+<tr><td>3002</td><td><a href="https://www.hackerrank.com/contests/nebula-clash-003/challenges/housing-crisis-in-rentoria">Housing Crisis in Rentoria</a></td><td>toji</td></tr>
+<tr><td>3003</td><td><a href="https://www.hackerrank.com/contests/nebula-clash-003/challenges/krakens-many-titles-hard-version">Kraken’s Many Titles (Hard Version)</a></td><td>HasanMubin</td></tr>
+<tr><td>3004</td><td><a href="https://www.hackerrank.com/contests/nebula-clash-003/challenges/chronicles-of-the-royal-scribe">Chronicles of the Royal Scribe</a></td><td>toji</td></tr>
+<tr><td>3005</td><td><a href="https://www.hackerrank.com/contests/nebula-clash-003/challenges/max-equal-sum">Max Equal Sum</a></td><td>MArhamAA</td></tr>
+<tr><td>3006</td><td><a href="https://www.hackerrank.com/contests/nebula-clash-003/challenges/traveler-rigan">Traveler Rigan</a></td><td>MArhamAA</td></tr>
 </tbody></table>
 </div>
 <blockquote>
